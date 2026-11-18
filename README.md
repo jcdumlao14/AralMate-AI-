@@ -203,7 +203,7 @@ AralMate AI follows an end-to-end learning workflow that transforms uploaded stu
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/jcdumlao14/AralMate-AI.git
+git clone https://github.com/jcdumlao14/AralMate-AI-.git
 cd AralMate-AI
 ```
 
@@ -377,7 +377,7 @@ AralMate AI is an independent project and is not affiliated with or officially e
 - **Category:** Education / Artificial Intelligence
 - **Application Type:** AI-powered study companion
 - **Development:** Individual project
-- **Repository:** https://github.com/jcdumlao14/AralMate-AI
+- **Repository:** https://github.com/jcdumlao14/AralMate-AI-
 - **Hackathon:** Build Your First AI App 2026
 - **Host:** Yasir Insights
 
