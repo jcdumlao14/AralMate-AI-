@@ -1,0 +1,32 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Uploaded study documents
+data/uploads/*
+!data/uploads/.gitkeep
+
+# Local backups and diagnostic files
+*.backup*
+*-backup*
+*.color-version-backup
+quiz_quality_diagnostic.txt
+
+# Preserve the nested working copy locally, outside the GitHub submission
+/AralMate-AI/
+
+# Local README-generation utilities (preserved locally)
+/create_readme.ps1
+/create_readme.py
