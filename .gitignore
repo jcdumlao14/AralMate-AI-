@@ -33,3 +33,6 @@ quiz_quality_diagnostic.txt
 
 # Local documentation backups
 README.before-workflow-update.md
+
+# Local README repair backups
+README.before-*.md

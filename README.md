@@ -1,4 +1,4 @@
-# ðŸ“š AralMate AI
+# 📚 AralMate AI
 
 ### Your Personal AI Study Companion
 
@@ -8,55 +8,55 @@ AralMate AI is an AI-powered study companion that transforms PDF study materials
 
 Upload learning materials, ask questions through an AI Tutor, generate practice quizzes, review flashcards, and identify topics that need more attention through a Knowledge Gap Map.
 
-**LEARN â€¢ PRACTICE â€¢ IMPROVE**
+**LEARN • PRACTICE • IMPROVE**
 
 ---
 
-## ðŸŽ¯ The Problem
+## 🎯 The Problem
 
 Students often work with lengthy PDF documents, lecture notes, and study materials. Finding relevant information, reviewing concepts, and identifying knowledge gaps can take time.
 
 AralMate AI brings document-based assistance, active recall, practice assessments, and learning insights together in one application.
 
-## ðŸ’¡ Our Solution
+## 💡 Our Solution
 
 AralMate AI provides a study workspace where learners can interact with their own uploaded materials instead of relying only on general-purpose AI responses.
 
-## âœ¨ Key Features
+## ✨ Key Features
 
-### ðŸ“‚ My Library
+### 📂 My Library
 - Upload PDF study materials.
 - Extract text from supported PDF documents.
 - Use uploaded materials as the basis for study activities.
 
-### ðŸ¤– AI Tutor
+### 🤖 AI Tutor
 - Ask questions about uploaded study materials.
 - Receive explanations grounded in relevant document passages.
 - View page references to help locate supporting information.
 
-### ðŸ“ Practice Studio
+### 📝 Practice Studio
 - Generate multiple-choice quizzes from study materials.
 - Submit answers and review results.
 - See correct answers and explanations.
 
-### ðŸ—‚ï¸ Flashcards
+### 🗂️ Flashcards
 - Generate question-and-answer flashcards.
 - Reveal answers interactively.
 - Support active recall and concept review.
 
-### ðŸ“Š Knowledge Gap Map
+### 📊 Knowledge Gap Map
 - Review performance using submitted quiz answers.
 - Aggregate results by topic.
 - Identify topics that may need more attention.
 - Filter learning insights by study material.
 
-### ðŸ  Learning Dashboard
+### 🏠 Learning Dashboard
 - Access the main study workspace.
 - Navigate the application's learning features.
 
 ---
 
-## ðŸŒŸ What Makes AralMate AI Different?
+## 🌟 What Makes AralMate AI Different?
 
 AralMate AI combines document-grounded learning with interactive practice and topic-level performance insights.
 
@@ -64,11 +64,11 @@ Its Knowledge Gap Map uses quiz responses to summarize performance by topic, hel
 
 The learning cycle:
 
-**Upload â†’ Understand â†’ Practice â†’ Review â†’ Improve**
+**Upload → Understand → Practice → Review → Improve**
 
 ---
 
-## ðŸ§  AI Implementation
+## 🧠 AI Implementation
 
 AralMate AI uses a Groq-hosted language model through an OpenAI-compatible API interface.
 
@@ -96,7 +96,7 @@ AI-generated content should be checked against the original study material.
 
 ---
 
-## ðŸ› ï¸ Technology Stack
+## 🛠️ Technology Stack
 
 | Technology | Purpose |
 |---|---|
@@ -110,44 +110,95 @@ AI-generated content should be checked against the original study material.
 
 ---
 
-## ðŸ–¥ï¸ Application Workflow
+## 🖥️ Application Workflow
+
+AralMate AI follows an end-to-end learning workflow that transforms uploaded study materials into interactive, AI-assisted learning activities and actionable performance insights.
 
 ```text
-PDF Study Material
- |
- v
- My Library
- |
- v
- PyMuPDF Extraction
- |
- v
- Document Sections
- |
- v
- TF-IDF Retrieval
- |
- v
- Relevant Context
- |
- v
- Groq LLM
- |
- +-------------------+
- | | |
- v v v
- AI Tutor Quizzes Flashcards
- |
- v
- Quiz Responses
- |
- v
- Knowledge Gap Map
+                         STUDENT
+                            |
+                            v
+                  STREAMLIT APPLICATION
+                            |
+        +-------------------+-------------------+
+        |                   |                   |
+        v                   v                   v
+   MY LIBRARY            AI TUTOR         PRACTICE STUDIO
+        |                   |                   |
+        v                   |                   |
+   UPLOAD PDF               |                   |
+        |                   |                   |
+        v                   |                   |
+   PyMuPDF TEXT EXTRACTION  |                   |
+        |                   |                   |
+        v                   |                   |
+   DOCUMENT PROCESSING     |                   |
+        |                   |                   |
+        v                   |                   |
+   TF-IDF VECTORIZATION    |                   |
+        |                   |                   |
+        v                   |                   |
+   COSINE SIMILARITY       |                   |
+        |                   |                   |
+        v                   |                   |
+   RELEVANT PASSAGES       |                   |
+   + PAGE REFERENCES       |                   |
+        |                   |                   |
+        +-------------------+-------------------+
+                            |
+                            v
+                 GROQ API INTEGRATION
+                            |
+                            v
+                CONFIGURED GPT-OSS 20B
+                            |
+             +--------------+--------------+
+             |              |              |
+             v              v              v
+        AI-POWERED      QUIZ GENERATION   FLASHCARD
+        EXPLANATIONS    AND EVALUATION    GENERATION
+             |              |              |
+             v              v              v
+        SOURCE-         QUIZ RESULTS     STUDY AND
+        GROUNDED        AND ANSWERS      REVIEW
+        RESPONSES           |
+                            v
+                  LEARNING INSIGHTS
+                            |
+                            v
+                  KNOWLEDGE GAP MAP
+                            |
+                            v
+               TOPIC-LEVEL PERFORMANCE
+                            |
+                            v
+                 TARGETED STUDY REVIEW
+                            |
+                            v
+                   BETTER LEARNING
 ```
+
+### How the Workflow Works
+
+1. **Upload Study Materials:** Students upload PDF study materials through My Library.
+
+2. **Extract and Process Content:** PyMuPDF extracts text and page information from supported PDF documents.
+
+3. **Retrieve Relevant Information:** The application uses scikit-learn's TF-IDF vectorization and cosine similarity to identify relevant document passages based on the student's question.
+
+4. **Generate AI-Assisted Learning Content:** Relevant context and student prompts are sent through the Groq API using the OpenAI-compatible Python SDK and the configured GPT-OSS 20B model.
+
+5. **Support Interactive Learning:** Students can ask questions through AI Tutor, generate and answer quizzes through Practice Studio, and create flashcards for reviewing important concepts.
+
+6. **Analyze Learning Performance:** Submitted quiz answers are evaluated and organized into topic-level performance insights.
+
+7. **Identify Knowledge Gaps:** The Knowledge Gap Map highlights topics that need additional attention, helping students focus their review efforts.
+
+8. **Improve Continuously:** Students can revisit their learning materials, review weak topics, practice again, and monitor their progress.
 
 ---
 
-## ðŸš€ Getting Started
+## 🚀 Getting Started
 
 ### 1. Clone the repository
 
@@ -202,7 +253,7 @@ Open the local address displayed in your terminal.
 
 ---
 
-## ðŸ§ª Verification
+## 🧪 Verification
 
 The repository includes an automated verification script.
 
@@ -216,16 +267,16 @@ The verification script checks application components and helper functions witho
 
 ---
 
-## ðŸ“¸ Screenshots and Demo
+## 📸 Screenshots and Demo
 
 Add screenshots of the actual running application to demonstrate:
 
 1. Main Dashboard
-2. My Library â€” PDF upload
-3. AI Tutor â€” document-grounded response
-4. Practice Studio â€” generated quiz
-5. Flashcards â€” interactive review
-6. Knowledge Gap Map â€” topic-level learning insights
+2. My Library — PDF upload
+3. AI Tutor — document-grounded response
+4. Practice Studio — generated quiz
+5. Flashcards — interactive review
+6. Knowledge Gap Map — topic-level learning insights
 
 **Demo Video:** Add your demonstration video link here.
 
@@ -233,7 +284,7 @@ Add screenshots of the actual running application to demonstrate:
 
 ---
 
-## ðŸ‘©â€ðŸ’» Project Contribution
+## 👩‍💻 Project Contribution
 
 This is an individual AI application project.
 
@@ -257,7 +308,7 @@ The project implementation, integration, verification, and testing were part of 
 
 ---
 
-## ðŸ“š What I Learned
+## 📚 What I Learned
 
 Building AralMate AI provided practical experience in:
 
@@ -272,7 +323,7 @@ Building AralMate AI provided practical experience in:
 
 ---
 
-## âš™ï¸ Current Prototype Limitations
+## ⚙️ Current Prototype Limitations
 
 - Supports text-based PDF documents; OCR for scanned PDFs is not included.
 - Uses TF-IDF retrieval rather than vector embeddings.
@@ -283,7 +334,7 @@ Building AralMate AI provided practical experience in:
 
 ---
 
-## ðŸ” Privacy and Security
+## 🔐 Privacy and Security
 
 - API credentials are loaded through environment variables.
 - The `.env` file is excluded from version control.
@@ -292,13 +343,13 @@ Building AralMate AI provided practical experience in:
 
 ---
 
-## ðŸŽ“ Project Goal
+## 🎓 Project Goal
 
 AralMate AI aims to make studying more interactive, organized, and focused.
 
 By combining document-grounded assistance, active recall, practice assessments, and topic-level learning insights, it helps learners build a more structured study experience.
 
-**LEARN â€¢ PRACTICE â€¢ IMPROVE**
+**LEARN • PRACTICE • IMPROVE**
 
 ---
 
@@ -320,7 +371,7 @@ Third-party technologies, models, and services remain the property of their resp
 AralMate AI is an independent project and is not affiliated with or officially endorsed by the maintainers of these technologies.
 
 ---
-## ðŸ“„ Project Information
+## 📄 Project Information
 
 - **Project:** AralMate AI
 - **Category:** Education / Artificial Intelligence
