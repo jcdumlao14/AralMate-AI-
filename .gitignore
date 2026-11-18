@@ -30,3 +30,6 @@ quiz_quality_diagnostic.txt
 # Local README-generation utilities (preserved locally)
 /create_readme.ps1
 /create_readme.py
+
+# Local documentation backups
+README.before-workflow-update.md

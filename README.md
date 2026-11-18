@@ -1,4 +1,4 @@
-# 📚 AralMate AI
+# ðŸ“š AralMate AI
 
 ### Your Personal AI Study Companion
 
@@ -8,55 +8,55 @@ AralMate AI is an AI-powered study companion that transforms PDF study materials
 
 Upload learning materials, ask questions through an AI Tutor, generate practice quizzes, review flashcards, and identify topics that need more attention through a Knowledge Gap Map.
 
-**LEARN • PRACTICE • IMPROVE**
+**LEARN â€¢ PRACTICE â€¢ IMPROVE**
 
 ---
 
-## 🎯 The Problem
+## ðŸŽ¯ The Problem
 
 Students often work with lengthy PDF documents, lecture notes, and study materials. Finding relevant information, reviewing concepts, and identifying knowledge gaps can take time.
 
 AralMate AI brings document-based assistance, active recall, practice assessments, and learning insights together in one application.
 
-## 💡 Our Solution
+## ðŸ’¡ Our Solution
 
 AralMate AI provides a study workspace where learners can interact with their own uploaded materials instead of relying only on general-purpose AI responses.
 
-## ✨ Key Features
+## âœ¨ Key Features
 
-### 📂 My Library
+### ðŸ“‚ My Library
 - Upload PDF study materials.
 - Extract text from supported PDF documents.
 - Use uploaded materials as the basis for study activities.
 
-### 🤖 AI Tutor
+### ðŸ¤– AI Tutor
 - Ask questions about uploaded study materials.
 - Receive explanations grounded in relevant document passages.
 - View page references to help locate supporting information.
 
-### 📝 Practice Studio
+### ðŸ“ Practice Studio
 - Generate multiple-choice quizzes from study materials.
 - Submit answers and review results.
 - See correct answers and explanations.
 
-### 🗂️ Flashcards
+### ðŸ—‚ï¸ Flashcards
 - Generate question-and-answer flashcards.
 - Reveal answers interactively.
 - Support active recall and concept review.
 
-### 📊 Knowledge Gap Map
+### ðŸ“Š Knowledge Gap Map
 - Review performance using submitted quiz answers.
 - Aggregate results by topic.
 - Identify topics that may need more attention.
 - Filter learning insights by study material.
 
-### 🏠 Learning Dashboard
+### ðŸ  Learning Dashboard
 - Access the main study workspace.
 - Navigate the application's learning features.
 
 ---
 
-## 🌟 What Makes AralMate AI Different?
+## ðŸŒŸ What Makes AralMate AI Different?
 
 AralMate AI combines document-grounded learning with interactive practice and topic-level performance insights.
 
@@ -64,11 +64,11 @@ Its Knowledge Gap Map uses quiz responses to summarize performance by topic, hel
 
 The learning cycle:
 
-**Upload → Understand → Practice → Review → Improve**
+**Upload â†’ Understand â†’ Practice â†’ Review â†’ Improve**
 
 ---
 
-## 🧠 AI Implementation
+## ðŸ§  AI Implementation
 
 AralMate AI uses a Groq-hosted language model through an OpenAI-compatible API interface.
 
@@ -96,7 +96,7 @@ AI-generated content should be checked against the original study material.
 
 ---
 
-## 🛠️ Technology Stack
+## ðŸ› ï¸ Technology Stack
 
 | Technology | Purpose |
 |---|---|
@@ -110,7 +110,7 @@ AI-generated content should be checked against the original study material.
 
 ---
 
-## 🖥️ Application Workflow
+## ðŸ–¥ï¸ Application Workflow
 
 ```text
 PDF Study Material
@@ -147,7 +147,7 @@ PDF Study Material
 
 ---
 
-## 🚀 Getting Started
+## ðŸš€ Getting Started
 
 ### 1. Clone the repository
 
@@ -202,7 +202,7 @@ Open the local address displayed in your terminal.
 
 ---
 
-## 🧪 Verification
+## ðŸ§ª Verification
 
 The repository includes an automated verification script.
 
@@ -216,16 +216,16 @@ The verification script checks application components and helper functions witho
 
 ---
 
-## 📸 Screenshots and Demo
+## ðŸ“¸ Screenshots and Demo
 
 Add screenshots of the actual running application to demonstrate:
 
 1. Main Dashboard
-2. My Library — PDF upload
-3. AI Tutor — document-grounded response
-4. Practice Studio — generated quiz
-5. Flashcards — interactive review
-6. Knowledge Gap Map — topic-level learning insights
+2. My Library â€” PDF upload
+3. AI Tutor â€” document-grounded response
+4. Practice Studio â€” generated quiz
+5. Flashcards â€” interactive review
+6. Knowledge Gap Map â€” topic-level learning insights
 
 **Demo Video:** Add your demonstration video link here.
 
@@ -233,7 +233,7 @@ Add screenshots of the actual running application to demonstrate:
 
 ---
 
-## 👩‍💻 Project Contribution
+## ðŸ‘©â€ðŸ’» Project Contribution
 
 This is an individual AI application project.
 
@@ -257,7 +257,7 @@ The project implementation, integration, verification, and testing were part of 
 
 ---
 
-## 📚 What I Learned
+## ðŸ“š What I Learned
 
 Building AralMate AI provided practical experience in:
 
@@ -272,7 +272,7 @@ Building AralMate AI provided practical experience in:
 
 ---
 
-## ⚙️ Current Prototype Limitations
+## âš™ï¸ Current Prototype Limitations
 
 - Supports text-based PDF documents; OCR for scanned PDFs is not included.
 - Uses TF-IDF retrieval rather than vector embeddings.
@@ -283,7 +283,7 @@ Building AralMate AI provided practical experience in:
 
 ---
 
-## 🔐 Privacy and Security
+## ðŸ” Privacy and Security
 
 - API credentials are loaded through environment variables.
 - The `.env` file is excluded from version control.
@@ -292,17 +292,35 @@ Building AralMate AI provided practical experience in:
 
 ---
 
-## 🎓 Project Goal
+## ðŸŽ“ Project Goal
 
 AralMate AI aims to make studying more interactive, organized, and focused.
 
 By combining document-grounded assistance, active recall, practice assessments, and topic-level learning insights, it helps learners build a more structured study experience.
 
-**LEARN • PRACTICE • IMPROVE**
+**LEARN â€¢ PRACTICE â€¢ IMPROVE**
 
 ---
 
-## 📄 Project Information
+## 🙏 Third-Party Technologies and Acknowledgments
+
+AralMate AI is built using the following open-source technologies and AI services:
+
+- **Python** – Main programming language.
+- **Streamlit** – Interactive web application framework.
+- **PyMuPDF** – PDF text extraction and document processing.
+- **scikit-learn** – TF-IDF vectorization and cosine similarity-based document retrieval.
+- **OpenAI Python SDK** – API client for communicating with the Groq-compatible endpoint.
+- **Groq** – Hosted AI inference service.
+- **GPT-OSS 20B** – Configured language model used for AI-assisted learning.
+- **python-dotenv** – Environment variable configuration.
+
+Third-party technologies, models, and services remain the property of their respective owners and are subject to their applicable licenses, terms, and usage policies.
+
+AralMate AI is an independent project and is not affiliated with or officially endorsed by the maintainers of these technologies.
+
+---
+## ðŸ“„ Project Information
 
 - **Project:** AralMate AI
 - **Category:** Education / Artificial Intelligence
