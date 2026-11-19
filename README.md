@@ -112,71 +112,7 @@ AI-generated content should be checked against the original study material.
 
 ## 🖥️ Application Workflow
 
-AralMate AI follows an end-to-end learning workflow that transforms uploaded study materials into interactive, AI-assisted learning activities and actionable performance insights.
-
-```text
-                         STUDENT
-                            |
-                            v
-                  STREAMLIT APPLICATION
-                            |
-        +-------------------+-------------------+
-        |                   |                   |
-        v                   v                   v
-   MY LIBRARY            AI TUTOR         PRACTICE STUDIO
-        |                   |                   |
-        v                   |                   |
-   UPLOAD PDF               |                   |
-        |                   |                   |
-        v                   |                   |
-   PyMuPDF TEXT EXTRACTION  |                   |
-        |                   |                   |
-        v                   |                   |
-   DOCUMENT PROCESSING     |                   |
-        |                   |                   |
-        v                   |                   |
-   TF-IDF VECTORIZATION    |                   |
-        |                   |                   |
-        v                   |                   |
-   COSINE SIMILARITY       |                   |
-        |                   |                   |
-        v                   |                   |
-   RELEVANT PASSAGES       |                   |
-   + PAGE REFERENCES       |                   |
-        |                   |                   |
-        +-------------------+-------------------+
-                            |
-                            v
-                 GROQ API INTEGRATION
-                            |
-                            v
-                CONFIGURED GPT-OSS 20B
-                            |
-             +--------------+--------------+
-             |              |              |
-             v              v              v
-        AI-POWERED      QUIZ GENERATION   FLASHCARD
-        EXPLANATIONS    AND EVALUATION    GENERATION
-             |              |              |
-             v              v              v
-        SOURCE-         QUIZ RESULTS     STUDY AND
-        GROUNDED        AND ANSWERS      REVIEW
-        RESPONSES           |
-                            v
-                  LEARNING INSIGHTS
-                            |
-                            v
-                  KNOWLEDGE GAP MAP
-                            |
-                            v
-               TOPIC-LEVEL PERFORMANCE
-                            |
-                            v
-                 TARGETED STUDY REVIEW
-                            |
-                            v
-                   BETTER LEARNING
-```
+![AralMate AI Application Workflow](assets/diagrams/application-workflow.png)
 
 ### How the Workflow Works
 
@@ -269,20 +205,37 @@ The verification script checks application components and helper functions witho
 
 ## 📸 Screenshots and Demo
 
-Add screenshots of the actual running application to demonstrate:
+Explore the main features and user experience of AralMate AI through the application screenshots below.
 
-1. Main Dashboard
-2. My Library — PDF upload
-3. AI Tutor — document-grounded response
-4. Practice Studio — generated quiz
-5. Flashcards — interactive review
-6. Knowledge Gap Map — topic-level learning insights
+### 1. Main Dashboard
 
-**Demo Video:** Add your demonstration video link here.
+![AralMate AI Dashboard](assets/screenshots/01-dashboard.png)
 
-**Live Application:** Add your deployed application link here, if available.
+### 2. My Library — Study Materials
 
----
+![My Library](assets/screenshots/02-my-library.png)
+
+### 3. AI Tutor — Document-Grounded Assistance
+
+![AI Tutor](assets/screenshots/03-ai-tutor.png)
+
+### 4. Practice Studio — Interactive Quizzes
+
+![Practice Studio](assets/screenshots/04-practice-studio.png)
+
+### 5. Flashcards — Active Learning and Review
+
+![Flashcards](assets/screenshots/05-flashcards.png)
+
+### 6. Knowledge Gap Map — Learning Insights
+
+![Knowledge Gap Map](assets/screenshots/06-knowledge-gap-map.png)
+
+### 🎥 Demo Video
+
+Watch the AralMate AI demonstration to see how students can upload study materials, interact with the AI Tutor, practice with quizzes, review flashcards, and identify topics that need further attention.
+
+[▶ Watch the AralMate AI Demo Video](assets/demo/aralmate1.mp4)
 
 ## 👩‍💻 Project Contribution
 
