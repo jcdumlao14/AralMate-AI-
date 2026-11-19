@@ -13,7 +13,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # -----------------------------------------------------------------------------
-# AralMate AI â€” document-grounded study companion
+# AralMate AI — document-grounded study companion
 # Groq is accessed through its OpenAI-compatible Chat Completions endpoint.
 # -----------------------------------------------------------------------------
 
@@ -21,7 +21,7 @@ load_dotenv(override=False)
 
 st.set_page_config(
     page_title="AralMate AI | Study Workspace",
-    page_icon="ðŸ“š",
+    page_icon="📚",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -359,25 +359,25 @@ def validate_flashcards(data: Any) -> list[dict[str, str]]:
 
 # --------------------------------- SIDEBAR ------------------------------------
 with st.sidebar:
-    st.markdown("## ðŸ“š AralMate AI")
+    st.markdown("## 📚 AralMate AI")
     st.caption("YOUR PERSONAL STUDY COMPANION")
     st.divider()
     page = st.radio(
         "WORKSPACE",
         [
-            "ðŸ  Dashboard",
-            "ðŸ“‚ My Library",
-            "ðŸ¤– AI Tutor",
-            "ðŸ“ Practice Studio",
-            "ðŸ—‚ï¸ Flashcards",
-            "ðŸ§­ Knowledge Gap Map",
+            "🏠 Dashboard",
+            "📂 My Library",
+            "🤖 AI Tutor",
+            "📝 Practice Studio",
+            "🗂️ Flashcards",
+            "🧭 Knowledge Gap Map",
         ],
         label_visibility="visible",
     )
     st.divider()
     if st.session_state.filename:
         st.caption("CURRENT STUDY MATERIAL")
-        st.write(f"ðŸ“˜ {st.session_state.filename}")
+        st.write(f"📘 {st.session_state.filename}")
     else:
         st.caption("NO DOCUMENT UPLOADED YET")
     st.divider()
@@ -387,14 +387,14 @@ with st.sidebar:
     else:
         st.warning("AI provider not configured")
         st.caption("PDF retrieval works now. Add a Groq key to enable generation.")
-    st.caption("LEARN â€¢ PRACTICE â€¢ IMPROVE")
+    st.caption("LEARN • PRACTICE • IMPROVE")
 
 
 # -------------------------------- DASHBOARD -----------------------------------
-if page == "ðŸ  Dashboard":
+if page == "🏠 Dashboard":
     st.markdown(
-        "<div class='hero'><h1>Learn smarter, one step at a time. ðŸŒ±</h1>"
-        "<p>Your study materials, AI tutor, quizzes, and flashcards â€” all in one learning workspace.</p></div>",
+        "<div class='hero'><h1>Learn smarter, one step at a time. 🌱</h1>"
+        "<p>Your study materials, AI tutor, quizzes, and flashcards — all in one learning workspace.</p></div>",
         unsafe_allow_html=True,
     )
     col1, col2, col3, col4 = st.columns(4)
@@ -402,7 +402,7 @@ if page == "ðŸ  Dashboard":
         ("STUDY MATERIAL", "1" if st.session_state.pages else "0", "Uploaded documents"),
         ("PAGES PROCESSED", str(len(st.session_state.pages)), "Readable PDF pages"),
         ("SEARCHABLE SECTIONS", str(len(st.session_state.chunks)), "Document passages"),
-        ("LATEST QUIZ SCORE", str(st.session_state.score) if st.session_state.score is not None else "â€”", "Based on your last quiz"),
+        ("LATEST QUIZ SCORE", str(st.session_state.score) if st.session_state.score is not None else "—", "Based on your last quiz"),
     ]
     for column, (label, value, caption) in zip([col1, col2, col3, col4], metrics):
         with column:
@@ -415,12 +415,12 @@ if page == "ðŸ  Dashboard":
     st.markdown("### Your learning workspace")
     cards = st.columns(2)
     with cards[0]:
-        st.markdown("<div class='study-card'><h3>ðŸ“‚ My Library</h3><p>Upload a PDF and turn your learning material into a searchable study space.</p></div>", unsafe_allow_html=True)
-        st.markdown("<div class='study-card'><h3>ðŸ¤– AI Tutor</h3><p>Ask questions and receive explanations grounded in your uploaded material.</p></div>", unsafe_allow_html=True)
-        st.markdown("<div class='study-card'><h3>ðŸ§­ Knowledge Gap Map</h3><p>See topics that need more attention based on your quiz attempts.</p></div>", unsafe_allow_html=True)
+        st.markdown("<div class='study-card'><h3>📂 My Library</h3><p>Upload a PDF and turn your learning material into a searchable study space.</p></div>", unsafe_allow_html=True)
+        st.markdown("<div class='study-card'><h3>🤖 AI Tutor</h3><p>Ask questions and receive explanations grounded in your uploaded material.</p></div>", unsafe_allow_html=True)
+        st.markdown("<div class='study-card'><h3>🧭 Knowledge Gap Map</h3><p>See topics that need more attention based on your quiz attempts.</p></div>", unsafe_allow_html=True)
     with cards[1]:
-        st.markdown("<div class='study-card'><h3>ðŸ“ Practice Studio</h3><p>Generate questions, check your understanding, and learn from explanations.</p></div>", unsafe_allow_html=True)
-        st.markdown("<div class='study-card'><h3>ðŸ—‚ï¸ Flashcards</h3><p>Review important concepts with interactive question-and-answer cards.</p></div>", unsafe_allow_html=True)
+        st.markdown("<div class='study-card'><h3>📝 Practice Studio</h3><p>Generate questions, check your understanding, and learn from explanations.</p></div>", unsafe_allow_html=True)
+        st.markdown("<div class='study-card'><h3>🗂️ Flashcards</h3><p>Review important concepts with interactive question-and-answer cards.</p></div>", unsafe_allow_html=True)
     if not st.session_state.pages:
         st.info("Start by opening **My Library** and uploading a text-based PDF.")
     if not GROQ_API_KEY:
@@ -428,7 +428,7 @@ if page == "ðŸ  Dashboard":
 
 
 # ---------------------------------- LIBRARY -----------------------------------
-elif page == "ðŸ“‚ My Library":
+elif page == "📂 My Library":
     st.markdown("<h2 class='section-title'>My Learning Library</h2>", unsafe_allow_html=True)
     st.write("Upload a PDF to create your personal study space.")
     upload = st.file_uploader("Choose a study PDF", type=["pdf"], help="Text-based PDFs work best. Scanned PDFs need OCR, which is not included in this MVP.")
@@ -457,8 +457,8 @@ elif page == "ðŸ“‚ My Library":
                 st.error(f"Could not process this PDF: {exc}")
     if st.session_state.pages:
         st.markdown("### Your uploaded material")
-        st.write(f"ðŸ“˜ **{st.session_state.filename}**")
-        st.write(f"{len(st.session_state.pages)} readable pages â€¢ {len(st.session_state.chunks)} searchable sections")
+        st.write(f"📘 **{st.session_state.filename}**")
+        st.write(f"{len(st.session_state.pages)} readable pages • {len(st.session_state.chunks)} searchable sections")
         with st.expander("Preview extracted text"):
             for item in st.session_state.pages[:3]:
                 st.markdown(f"**Page {item['page']}**")
@@ -475,7 +475,7 @@ elif page == "ðŸ“‚ My Library":
 
 
 # --------------------------------- AI TUTOR ----------------------------------
-elif page == "ðŸ¤– AI Tutor":
+elif page == "🤖 AI Tutor":
     st.markdown("<h2 class='section-title'>Your AI Study Tutor</h2>", unsafe_allow_html=True)
     st.caption("Ask questions about your uploaded study material. Answers are grounded in retrieved passages.")
     if not st.session_state.chunks:
@@ -534,7 +534,7 @@ elif page == "ðŸ¤– AI Tutor":
 
 
 # ------------------------------ PRACTICE STUDIO -------------------------------
-elif page == "ðŸ“ Practice Studio":
+elif page == "📝 Practice Studio":
     st.markdown("<h2 class='section-title'>Practice Studio</h2>", unsafe_allow_html=True)
     st.write("Generate a short multiple-choice quiz from your uploaded study material.")
     if not st.session_state.chunks:
@@ -542,7 +542,7 @@ elif page == "ðŸ“ Practice Studio":
     elif not GROQ_API_KEY:
         st.info("Connect your Groq API key to generate quizzes. PDF upload and retrieval are available without it.")
     else:
-        if st.button("âœ¨ Generate 5-question quiz", type="primary"):
+        if st.button("✨ Generate 5-question quiz", type="primary"):
             with st.spinner("Creating questions from your study material..."):
                 try:
                     context = document_context(st.session_state.chunks, limit=16, max_chars=12000)
@@ -654,7 +654,7 @@ elif page == "ðŸ“ Practice Studio":
 
 
 # -------------------------------- FLASHCARDS ---------------------------------
-elif page == "ðŸ—‚ï¸ Flashcards":
+elif page == "🗂️ Flashcards":
     st.markdown("<h2 class='section-title'>Flashcard Studio</h2>", unsafe_allow_html=True)
     st.write("Create quick review cards from your study material.")
     if not st.session_state.chunks:
@@ -662,7 +662,7 @@ elif page == "ðŸ—‚ï¸ Flashcards":
     elif not GROQ_API_KEY:
         st.info("Connect your Groq API key to generate flashcards.")
     else:
-        if st.button("âœ¨ Generate flashcards", type="primary"):
+        if st.button("✨ Generate flashcards", type="primary"):
             with st.spinner("Creating your flashcards..."):
                 try:
                     context = document_context(st.session_state.chunks, limit=14, max_chars=10000)
@@ -695,7 +695,7 @@ elif page == "ðŸ—‚ï¸ Flashcards":
             st.write("")
             nav1, nav2, nav3 = st.columns([1, 2, 1])
             with nav1:
-                if st.button("â† Previous", disabled=index == 0, use_container_width=True):
+                if st.button("← Previous", disabled=index == 0, use_container_width=True):
                     st.session_state.flashcard_index -= 1
                     st.session_state.flashcard_revealed = False
                     st.rerun()
@@ -705,14 +705,14 @@ elif page == "ðŸ—‚ï¸ Flashcards":
                     st.session_state.flashcard_revealed = not st.session_state.flashcard_revealed
                     st.rerun()
             with nav3:
-                if st.button("Next â†’", disabled=index >= total - 1, use_container_width=True):
+                if st.button("Next →", disabled=index >= total - 1, use_container_width=True):
                     st.session_state.flashcard_index += 1
                     st.session_state.flashcard_revealed = False
                     st.rerun()
 
 
 # ----------------------------- KNOWLEDGE GAP MAP -----------------------------
-elif page == "ðŸ§­ Knowledge Gap Map":
+elif page == "🧭 Knowledge Gap Map":
     st.markdown(
         "<h2 class='section-title'>Your Knowledge Gap Map</h2>",
         unsafe_allow_html=True,
@@ -745,7 +745,7 @@ elif page == "ðŸ§­ Knowledge Gap Map":
             if document_id == "__legacy__":
                 label = filename
             else:
-                label = f"{filename} Â· {str(document_id)[:8]}"
+                label = f"{filename} · {str(document_id)[:8]}"
 
             document_options[label] = document_id
 
@@ -810,8 +810,8 @@ elif page == "ðŸ§­ Knowledge Gap Map":
                     with left:
                         st.markdown(f"**{topic}**")
                         st.caption(
-                            f"{counts['incorrect']} incorrect â€¢ "
-                            f"{counts['correct']} correct â€¢ "
+                            f"{counts['incorrect']} incorrect • "
+                            f"{counts['correct']} correct • "
                             f"{total} responses"
                         )
                         st.progress(
@@ -842,5 +842,5 @@ elif page == "ðŸ§­ Knowledge Gap Map":
 
 
 # ---------------------------------- FOOTER -------------------------------------
-st.markdown("<div style='height:18px'></div><p class='muted' style='text-align:center;font-size:12px;'>AralMate AI â€¢ Learn smarter. Understand deeper. Prepare better.</p>", unsafe_allow_html=True)
+st.markdown("<div style='height:18px'></div><p class='muted' style='text-align:center;font-size:12px;'>AralMate AI • Learn smarter. Understand deeper. Prepare better.</p>", unsafe_allow_html=True)
 
