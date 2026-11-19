@@ -235,7 +235,7 @@ Explore the main features and user experience of AralMate AI through the applica
 
 Watch the AralMate AI demonstration to see how students can upload study materials, interact with the AI Tutor, practice with quizzes, review flashcards, and identify topics that need further attention.
 
-[▶ Watch the AralMate AI Demo Video](assets/demo/aralmate1.mp4)
+[▶ Watch the AralMate AI Demo Video](https://youtu.be/E9uBrUL3JxA)
 
 ## 👩‍💻 Project Contribution
 
